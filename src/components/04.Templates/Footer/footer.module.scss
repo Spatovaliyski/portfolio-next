@@ -1,0 +1,11 @@
+@import '/src/components/00.Globals/variables.scss';
+
+.footer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  //border-top: 1px solid $color-footer-dash;
+
+  font-size: 14px;
+  font-weight: 300;
+}

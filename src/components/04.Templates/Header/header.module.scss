@@ -1,0 +1,24 @@
+@import '../../00.Globals/variables.scss';
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  top: 1em;
+  width: 100%;
+  padding: 1em 0;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  padding: 1em 0;
+  justify-content: flex-end;
+  gap: 1em;
+  background-color: white
+}
+
+.siteTitle {
+  margin-right: 2em;
+}

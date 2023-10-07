@@ -1,0 +1,29 @@
+.backTo {
+  display: inline-block;
+  margin-bottom: 1em;
+  opacity: .5;
+
+  svg {
+    transition: .1s ease all;
+    transform: scale(1);
+    opacity: .4;
+  }
+
+  &:hover {
+    opacity: 1;
+
+    p { 
+      text-decoration: underline;
+    }
+
+    svg {
+      opacity: 1;
+      transform: translateX(-.2em) scale(1);
+    }
+  }
+}
+
+.container {
+  display: flex;
+  gap: .5em;
+}

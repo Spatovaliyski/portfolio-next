@@ -1,0 +1,33 @@
+@import '../components/00.Globals/variables.scss';
+@import '../components/00.Globals/breakpoints.scss';
+
+.site {
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+	margin-top: 6em;
+  flex: 1;
+
+  @include md {
+    margin-top: 2em;
+  }
+}
+
+.code {
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25%, auto));
+  max-width: 100%;
+  width: var(--max-width);
+}

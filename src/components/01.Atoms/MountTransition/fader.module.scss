@@ -1,0 +1,38 @@
+.fadeUp {
+  animation: fadeUpAnimation ease-in-out forwards;
+  animation-duration: 300ms;
+  opacity: 0;
+
+  @keyframes fadeUpAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.delay {
+  &-10 {
+    animation-delay: 100ms;
+  }
+
+  &-20 {
+    animation-delay: 200ms;
+  }
+
+  &-30 {
+    animation-delay: 300ms;
+  }
+
+  &-40 {
+    animation-delay: 400ms;
+  }
+
+  &-50 {
+    animation-delay: 500ms;
+  }
+}

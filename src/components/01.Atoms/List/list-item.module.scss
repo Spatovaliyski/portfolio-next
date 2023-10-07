@@ -1,0 +1,63 @@
+@import '/src/components/00.Globals/variables.scss';
+@import '/src/components/00.Globals/breakpoints.scss';
+
+.listItem {
+  margin-bottom: 2em;
+  list-style: none;
+  position: relative;
+}
+
+.description {
+  word-wrap: pre;
+}
+
+.dot {
+  background-color: $color-primary;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: -29px;
+  top: .35em;
+  border-radius: 50%;
+  z-index: 1;
+
+  @include md {
+    display: none;
+  }
+}
+
+.position {
+  font-weight: bold;
+  font-size: 1.15em;
+  margin-bottom: .25rem;
+}
+
+.employer {
+  font-weight: 400;
+  margin-bottom: .25rem;
+  display: inline-block;
+  margin-right: .5em;
+}
+
+.timeline {
+  display: inline-block;
+  font-weight: 300;
+
+  &:before {
+    content: '(';
+  }
+
+  &:after {
+    contenT: ')';
+  }
+}
+
+.type {
+  font-weight: 300;
+  margin-bottom: .75rem;
+}
+
+.description {  
+  white-space: pre-line;
+  color: $color-list-description;
+}

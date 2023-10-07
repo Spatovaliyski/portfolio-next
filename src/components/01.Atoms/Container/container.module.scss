@@ -1,0 +1,9 @@
+@import '/src/components/00.Globals/variables.scss';
+@import '/src/components/00.Globals/breakpoints.scss';
+
+.container {
+	max-width: $site-max-width;
+	width: 100%;
+	padding: 0 $site-padded-offset;
+	margin: 0 auto;
+}

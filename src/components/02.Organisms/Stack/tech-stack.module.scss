@@ -1,0 +1,16 @@
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.techStackItem {
+  border: 1px solid #d9d9d9;
+  padding: 8px;
+  display: inline-block;
+  list-style: none;
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: 300;
+}

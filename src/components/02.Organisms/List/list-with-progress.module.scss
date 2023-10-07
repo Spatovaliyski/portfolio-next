@@ -1,0 +1,23 @@
+@import '/src/components/00.Globals/variables.scss';
+@import '/src/components/00.Globals/breakpoints.scss';
+
+.container {
+  position: relative;
+  margin-left: 2em;
+
+  @include md {
+    margin-left: 0;
+  }
+}
+
+.progressBar {
+  border: 1px dashed lighten($color-list-progress, 40%);
+  height: calc(100% + 1em);
+  position: absolute;
+  left: -1.5em;
+  top: -.5em;
+
+  @include md {
+    display: none;
+  }
+}
