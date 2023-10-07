@@ -1,16 +1,15 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import BackArrow from '@/components/01.Atoms/BackArrow/back-arrow';
-import Title from '@/components/01.Atoms/Title/title';
+import BlogPost from '@/components/05.Pages/BlogPost/post';
 
-const BlogPage = ({ params }) => {
+const Post = ({params}) => {
   return (
     <>
       <BackArrow href={'/blog'} />
-      <Title type={'h2'}>Blog</Title>
-
-      <>WIP but this is the ID: {params.id}</>
+      <BlogPost id={params.id} />
     </>
   )
 };
 
-export default BlogPage;
+export default Post;

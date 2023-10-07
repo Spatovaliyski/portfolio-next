@@ -1,15 +1,15 @@
+import React from 'react';
 import BackArrow from '@/components/01.Atoms/BackArrow/back-arrow';
-import Title from '@/components/01.Atoms/Title/title';
+import Blog from '@/components/05.Pages/BlogPosts/blog';
 
-const Portfolio = () => {
+// Posts page component
+const BlogPage = ({ posts }) => {
   return (
     <>
       <BackArrow href={'/'} />
-      <Title type={'h2'}>Blog</Title>
-
-      <>WIP</>
+      <Blog />
     </>
-  )
+  );
 };
 
-export default Portfolio;
+export default BlogPage;
