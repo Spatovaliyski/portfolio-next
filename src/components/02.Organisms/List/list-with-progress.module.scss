@@ -11,13 +11,19 @@
 }
 
 .progressBar {
-  border: 1px dashed lighten($color-list-progress, 40%);
+  border: 1px dashed var(--color-grayed);
   height: calc(100% + 1em);
   position: absolute;
   left: -1.5em;
   top: -.5em;
 
   @include md {
-    display: none;
+    left: 0;
+  }
+}
+
+.list {
+  @include md {
+    padding-left: 1em;
   }
 }

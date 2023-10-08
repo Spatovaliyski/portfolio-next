@@ -16,7 +16,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: var(--color-background);
     z-index: -1;
   }
 }
@@ -24,7 +24,7 @@
 .line {
   width: 15px;
   height: 25px;
-  background-color: #7f7f7f;
+  background-color: var(--color-grayed);
   margin: 0 5px;
   animation: pulsate 1.5s infinite;
   border-radius: 4px;

@@ -32,7 +32,7 @@ export default function Home() {
             link={'https://github.com/Spatovaliyski'}
             external={true}
             width={24}
-            buttonColor={'#333'}
+            buttonColor={'var(--color-github-icon)'}
             icon={faGithub}
           />
         </Animate>
@@ -42,7 +42,7 @@ export default function Home() {
             link={'mailto:martinspatovaliyski@gmail.com'}
             external={true}
             width={24}
-            buttonColor={'#444'}
+            buttonColor={'var(--color-mailto-icon)'}
             icon={faEnvelopeOpenText}
           />
         </Animate>

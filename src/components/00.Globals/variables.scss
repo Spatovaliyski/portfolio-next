@@ -1,20 +1,3 @@
 $site-max-width: 900px;
 $site-padded-offset: 16px;
 $site-font-size: 16px;
-
-$color-primary: #2a9f67;
-$color-secondary: #fbfbfb;
-$color-accent: #efefef;
-$color-grayed: #7f7f7f;
-$color-dark: #010101;
-
-// Menu
-$color-menu-active: $color-dark;
-$color-menu-inactive: $color-grayed;
-
-// Lists
-$color-list-progress: $color-grayed;
-$color-list-description: darken($color-grayed, 20%);
-
-// Footer
-$color-footer-dash: lighten($color-grayed, 40%);
