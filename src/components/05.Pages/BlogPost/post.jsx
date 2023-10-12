@@ -7,7 +7,7 @@ import Title from '@/components/01.Atoms/Title/title';
 
 import styles from './../BlogPosts/blog.module.scss'
 
-const BlogPost = (id) => {
+const BlogPost = (props) => {
   const [post, setPost] = useState();
   const [loading, setLoading] = useState(false);
 
@@ -15,7 +15,7 @@ const BlogPost = (id) => {
     setLoading(true);
 
     const fetchData = async () => {
-      const data = await apiService.getPost(id.id);
+      const data = await apiService.getPost(props.postId);
 
       const formattedPost = {
         id: data.id,

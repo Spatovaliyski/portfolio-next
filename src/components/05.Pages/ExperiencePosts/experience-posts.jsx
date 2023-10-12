@@ -39,7 +39,7 @@ const ExperiencePosts = () => {
       {!loading ? (
         <ListWithProgress>
           {posts && posts.map((post, index) => (
-            <Animate delay={index * 10}>
+            <Animate key={index} delay={index * 10}>
               <ListItem
                 className
                 start={post.startYear}
