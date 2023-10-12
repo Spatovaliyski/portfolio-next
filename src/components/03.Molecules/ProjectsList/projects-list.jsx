@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import apiService from '@/app/utils/service';
+import Loader from '@/components/01.Atoms/Loader/loader';
 import Animate from '@/components/01.Atoms/MountTransition/fader';
 import ProjectItem from '@/components/02.Organisms/Project/project-item';
 import he from 'he';
@@ -9,7 +10,7 @@ import styles from './projects-list.module.scss'
 
 const ProjectsList = () => {
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
@@ -34,20 +35,23 @@ const ProjectsList = () => {
 
   return (
     <div className={styles.projectsList}>
-      {posts && posts.map((post, index) => (
-        <Animate key={index} delay={index * 10}>
-          <ProjectItem
-            className={''}
-            title={post.title}
-            year={post.endYear}
-            description={post.content}
-            link={post.repository}
-            stack={post.tags}
-            image={post.thumbnailId}
-          />
-        </Animate>
-      ))}
-
+      {!loading ? (
+        posts && posts.map((post, index) => (
+          <Animate key={index} delay={index * 10}>
+            <ProjectItem
+              className={''}
+              title={post.title}
+              year={post.endYear}
+              description={post.content}
+              link={post.repository}
+              stack={post.tags}
+              image={post.thumbnailId}
+            />
+          </Animate>
+        ))
+      ) : (
+        <Loader />  
+      )}
     </div>
   )
 };

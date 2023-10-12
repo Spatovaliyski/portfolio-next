@@ -9,7 +9,7 @@ import styles from './../BlogPosts/blog.module.scss'
 
 const BlogPost = (props) => {
   const [post, setPost] = useState();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);

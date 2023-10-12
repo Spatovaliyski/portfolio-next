@@ -7,6 +7,7 @@
 
   --color-primary: #2a9f67;
   --color-background: #FFF;
+  --color-loader: rgba(255, 255, 255, 0.9);
   --color-secondary: #fbfbfb;
   --color-accent: #efefef;
   --color-grayed: #707070;
@@ -20,6 +21,7 @@
   :root {
     --color-primary: #0a5433;
     --color-background: #16161d;
+    --color-loader: rgba(22, 22, 29, 0.9);
     --color-secondary: #2e2e2e;
     --color-accent: #272727;
     --color-grayed: #b2b2b2;
@@ -96,4 +98,8 @@ code {
   background-color: #2c2c2c;
   border-radius: 3px;
   color: #ffffff;
+}
+
+.svg-inline--fa {
+  height: auto;
 }

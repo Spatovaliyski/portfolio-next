@@ -13,7 +13,7 @@ import styles from '../../03.Molecules/ProjectsList/projects-list.module.scss';
 
 const ProjectItem = ({ className, title, description, year, stack, link, image }) => {
   const [thumbnail, setThumbnail] = useState();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
@@ -29,46 +29,40 @@ const ProjectItem = ({ className, title, description, year, stack, link, image }
   }, []);
 
   return (
-    <>
-     {!loading ? (
-      <div className={`${styles.projectItem} ${className}`}>
-        <div className={styles.wrapper}>
-          <Animate delay={10}>
-            <div className={styles.heading}>
-              <Title type={'h4'}>{title}</Title>
-              <p className={styles.dateOfCreation}>
-                <SocialButton
-                  width={20}
-                  link={link || ""}
-                  icon={faGithub}
-                >
-                  {year}
-                </SocialButton>
-              </p>
-            </div>
-          </Animate>
-
-          <div className={styles.content}>
-            <Animate delay={30}>
-              <p className={styles.description}>{description}</p>
-            </Animate>
-            
-            <Animate delay={40}>
-              <TechStack className={''} items={stack} />
-            </Animate>
+    <div className={`${styles.projectItem} ${className}`}>
+      <div className={styles.wrapper}>
+        <Animate delay={10}>
+          <div className={styles.heading}>
+            <Title type={'h4'}>{title}</Title>
+            <p className={styles.dateOfCreation}>
+              <SocialButton
+                width={20}
+                link={link || ""}
+                icon={faGithub}
+              >
+                {year}
+              </SocialButton>
+            </p>
           </div>
-        </div>
+        </Animate>
 
-        {!!thumbnail && (
-          <figure className={styles.projectBackground}>
-            <Image fill={true} className={styles.background} src={thumbnail.source_url} alt="" />
-          </figure>
-        )}
+        <div className={styles.content}>
+          <Animate delay={30}>
+            <p className={styles.description}>{description}</p>
+          </Animate>
+          
+          <Animate delay={40}>
+            <TechStack className={''} items={stack} />
+          </Animate>
         </div>
-      ) : (
-        <Loader />
+      </div>
+
+      {!!thumbnail && (
+        <figure className={styles.projectBackground}>
+          <Image fill={true} className={styles.background} src={thumbnail.source_url} alt="" />
+        </figure>
       )}
-    </>
+    </div>
   )
 };
 

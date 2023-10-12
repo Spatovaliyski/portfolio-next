@@ -11,7 +11,7 @@ import he from 'he';
 
 const ExperiencePosts = () => {
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
