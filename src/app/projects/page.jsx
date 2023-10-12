@@ -7,7 +7,7 @@ const Portfolio = () => {
   return (
     <>
       <BackArrow href={'/'} />
-      <Title type={'h2'}>Projects</Title>
+      <Title type={'h1'}>Projects</Title>
 
       <ProjectsList />
     </>

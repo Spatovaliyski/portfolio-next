@@ -1,47 +1,74 @@
+'use client'
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import apiService from '@/app/utils/service';
+import Loader from '@/components/01.Atoms/Loader/loader';
 import Title from '@/components/01.Atoms/Title/title';
 import SocialButton from '@/components/01.Atoms/Socials/social-button';
+import Animate from '@/components/01.Atoms/MountTransition/fader';
 import TechStack from '@/components/02.Organisms/Stack/tech-stack';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import Image from 'next/image';
-import Animate from '@/components/01.Atoms/MountTransition/fader';
 
 import styles from '../../03.Molecules/ProjectsList/projects-list.module.scss';
 
 const ProjectItem = ({ className, title, description, year, stack, link, image }) => {
+  const [thumbnail, setThumbnail] = useState();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+
+    const fetchData = async () => {
+      const data = await apiService.getThumbnail(image);
+
+      setThumbnail(data);
+      setLoading(false);
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <div className={`${styles.projectItem} ${className}`}>
-      <div className={styles.wrapper}>
-        <Animate delay={10}>
-        <div className={styles.heading}>
-          <Title type={'h4'}>{title}</Title>
-          <p className={styles.dateOfCreation}>
-            <SocialButton
-              width={20}
-              link={link || ""}
-              icon={faGithub}
-            >
-            {year}
-            </SocialButton>
-          </p>
-        </div>
-        </Animate>
-
-
-        <div className={styles.content}>
-          <Animate delay={30}>
-            <p className={styles.description}>{description}</p>
+    <>
+     {!loading ? (
+      <div className={`${styles.projectItem} ${className}`}>
+        <div className={styles.wrapper}>
+          <Animate delay={10}>
+            <div className={styles.heading}>
+              <Title type={'h4'}>{title}</Title>
+              <p className={styles.dateOfCreation}>
+                <SocialButton
+                  width={20}
+                  link={link || ""}
+                  icon={faGithub}
+                >
+                  {year}
+                </SocialButton>
+              </p>
+            </div>
           </Animate>
-          
-          <Animate delay={40}>
-            <TechStack className={''} items={stack} />
-          </Animate>
+
+          <div className={styles.content}>
+            <Animate delay={30}>
+              <p className={styles.description}>{description}</p>
+            </Animate>
+            
+            <Animate delay={40}>
+              <TechStack className={''} items={stack} />
+            </Animate>
+          </div>
         </div>
-      </div>
-      
-      <figure className={styles.projectBackground}>
-        <Image fill={true} className={styles.background} src={image} alt="" />
-      </figure>
-    </div>
+
+        {!!thumbnail && (
+          <figure className={styles.projectBackground}>
+            <Image fill={true} className={styles.background} src={thumbnail.source_url} alt="" />
+          </figure>
+        )}
+        </div>
+      ) : (
+        <Loader />
+      )}
+    </>
   )
 };
 
