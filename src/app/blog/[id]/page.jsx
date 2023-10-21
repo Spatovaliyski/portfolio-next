@@ -1,7 +1,7 @@
-'use client'
-import React, { useEffect, useState } from 'react'
+import React, { Suspense } from 'react'
 import BackArrow from '@/components/01.Atoms/BackArrow/back-arrow';
 import BlogPost from '@/components/05.Pages/BlogPost/post';
+import Loader from '@/components/01.Atoms/Loader/loader';
 
 const Post = ({ params }) => {
   const postId = params.id
@@ -9,7 +9,8 @@ const Post = ({ params }) => {
   return (
     <>
       <BackArrow href={'/blog'} />
-      <BlogPost postId={postId} />
+      
+      <Suspense fallback={<Loader />}><BlogPost postId={postId} /></Suspense>
     </>
   )
 };
