@@ -1,25 +1,12 @@
-import he from 'he';
-import apiService from '@/app/utils/service';
+import getBlogPost from '@/app/lib/getBlogPost';
 import Title from '@/components/01.Atoms/Title/title';
 
 import styles from './../BlogPosts/blog.module.scss'
 
-async function getPost(id) {
-  const data = await apiService.getPost(id);
+const BlogPost = async ({ postId }) => {
+  const blogPost = await getBlogPost(postId);
 
-  const formattedPost = {
-    id: data.id,
-    title: he.decode(data.title.rendered),
-    content: data.content.rendered,
-    date: new Date(data.date).toLocaleDateString('en-GB'),
-  };
-
-  return formattedPost;
-}
-
-const BlogPost = async (props) => {
-  console.log(props.postId);
-  const post = await getPost(props.postId);
+  const [post] = await Promise.all([blogPost]);
 
   return (
     <div className={styles.article}>

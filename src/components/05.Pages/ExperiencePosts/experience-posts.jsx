@@ -1,27 +1,12 @@
+import getExperiencePosts from '@/app/lib/getExperiencePosts';
 import Animate from '@/components/01.Atoms/MountTransition/fader';
 import ListItem from '@/components/01.Atoms/List/list-item';
 import ListWithProgress from '@/components/02.Organisms/List/list-with-progress';
-import apiService from '@/app/utils/service';
-import he from 'he';
-
-async function getData() {
-  const data = await apiService.getWorkExperience();
-  const formattedPosts = data.map(post => ({
-    id: post.id,
-    title: he.decode(post.title.rendered),
-    content: post.the_content,
-    location: post.location,
-    position: post.company_position,
-    startYear: post.start_year,
-    endYear: post.end_year,
-  }));
-
-  return formattedPosts;
-}
 
 const ExperiencePosts = async () => {
-  const posts = await getData();
-  const loading = false;
+  const experiencePosts = await getExperiencePosts();
+
+  const [posts] = await Promise.all([experiencePosts]);
 
   return (
     <ListWithProgress>

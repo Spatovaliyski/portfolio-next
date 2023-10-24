@@ -1,25 +1,14 @@
-import he from 'he';
 import Link from 'next/link';
-import apiService from '@/app/utils/service';
+import getBlogPosts from '@/app/lib/getBlogPosts';
 import Title from '@/components/01.Atoms/Title/title';
 
 import styles from './blog.module.scss'
- 
-async function getPosts() {
-  const data = await apiService.getPosts();
-  const formattedPosts = data.map(post => ({
-    id: post.id,
-    title: he.decode(post.title.rendered),
-    content: post.content.rendered,
-    date: new Date(post.date).toLocaleDateString('en-US'),
-  }));
-
-  return formattedPosts;
-}
 
 const Blog = async () => {
-  const posts = await getPosts();
+  const blogPosts = await getBlogPosts();
 
+  const [posts] = await Promise.all([blogPosts]);
+  
   return (
     <div className={styles.articles}>
       {posts.map(post => (
