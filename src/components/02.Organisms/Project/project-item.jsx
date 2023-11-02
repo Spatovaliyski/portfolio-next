@@ -1,32 +1,17 @@
-'use client'
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import apiService from '@/app/utils/service';
-import Loader from '@/components/01.Atoms/Loader/loader';
 import Title from '@/components/01.Atoms/Title/title';
 import SocialButton from '@/components/01.Atoms/Socials/social-button';
 import Animate from '@/components/01.Atoms/MountTransition/fader';
 import TechStack from '@/components/02.Organisms/Stack/tech-stack';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import getMedia from '@/app/lib/getMedia';
 
 import styles from '../../03.Molecules/ProjectsList/projects-list.module.scss';
 
-const ProjectItem = ({ className, title, description, year, stack, link, image }) => {
-  const [thumbnail, setThumbnail] = useState();
-  const [loading, setLoading] = useState(true);
+const ProjectItem = async ({ className, title, description, year, stack, link, image }) => {
+  const media = await getMedia(image);
 
-  useEffect(() => {
-    setLoading(true);
-
-    const fetchData = async () => {
-      const data = await apiService.getThumbnail(image);
-
-      setThumbnail(data);
-      setLoading(false);
-    };
-
-    fetchData();
-  }, []);
+  const [thumbnail] = await Promise.all([media]);
 
   return (
     <div className={`${styles.projectItem} ${className}`}>
@@ -57,9 +42,9 @@ const ProjectItem = ({ className, title, description, year, stack, link, image }
         </div>
       </div>
 
-      {!!thumbnail && (
+      {thumbnail && (
         <figure className={styles.projectBackground}>
-          <Image fill={true} className={styles.background} src={thumbnail.source_url} alt="" />
+          <Image fill={true} className={styles.background} src={thumbnail.url} alt="" />
         </figure>
       )}
     </div>

@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <Container>
-        &copy; 2022 - {currentYear()} / Made using Next13 & Headless WordPress
+        &copy; 2022 - {currentYear()} / Made using NextJS & WordPress
       </Container>
     </div>
   )

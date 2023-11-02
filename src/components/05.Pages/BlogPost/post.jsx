@@ -1,51 +1,19 @@
-'use client'
-import React, { useEffect, useState } from 'react'
-import he from 'he';
-import apiService from '@/app/utils/service';
-import Loader from '@/components/01.Atoms/Loader/loader';
+import getBlogPost from '@/app/lib/getBlogPost';
 import Title from '@/components/01.Atoms/Title/title';
 
 import styles from './../BlogPosts/blog.module.scss'
 
-const BlogPost = (props) => {
-  const [post, setPost] = useState();
-  const [loading, setLoading] = useState(true);
+const BlogPost = async ({ postId }) => {
+  const blogPost = await getBlogPost(postId);
 
-  useEffect(() => {
-    setLoading(true);
-
-    const fetchData = async () => {
-      const data = await apiService.getPost(props.postId);
-
-      const formattedPost = {
-        id: data.id,
-        title: he.decode(data.title.rendered),
-        content: data.content.rendered,
-        date: new Date(data.date).toLocaleDateString('en-GB'),
-      };
-
-      setPost(formattedPost);
-      setLoading(false);
-    };
-
-    fetchData();
-  }, []);
-
+  const [post] = await Promise.all([blogPost]);
 
   return (
-    <>
-      {!loading ? (
-        post && (
-        <div className={styles.article}>
-          <Title type={'h1'}>{post.title}</Title>
-          <div className={styles.articleDate}>{post.date}</div>
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
-        </div>
-        )
-      ) : (
-        <Loader />
-      )}
-    </>
+    <div className={styles.article}>
+      <Title type={'h1'}>{post.title}</Title>
+      <div className={styles.articleDate}>{post.date}</div>
+      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+    </div>
   )
 };
 
