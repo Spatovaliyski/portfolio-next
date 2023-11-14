@@ -3,6 +3,14 @@ import Title from '@/components/01.Atoms/Title/title';
 
 import styles from './../BlogPosts/blog.module.scss'
 
+/**
+ * Renders a blog post with the given postId.
+ *
+ * @async
+ * @param {Object} props - The component props.
+ * @param {string} props.postId - The ID of the blog post to render.
+ * @returns {JSX.Element} - The rendered blog post.
+ */
 const BlogPost = async ({ postId }) => {
   const blogPost = await getBlogPost(postId);
 

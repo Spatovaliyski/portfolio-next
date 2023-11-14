@@ -3,6 +3,10 @@ import Animate from '@/components/01.Atoms/MountTransition/fader';
 import ListItem from '@/components/01.Atoms/List/list-item';
 import ListWithProgress from '@/components/02.Organisms/List/list-with-progress';
 
+/**
+ * Renders a list of experience posts.
+ * @returns {JSX.Element} ExperiencePosts component.
+ */
 const ExperiencePosts = async () => {
   const experiencePosts = await getExperiencePosts();
 

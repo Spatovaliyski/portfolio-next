@@ -4,6 +4,10 @@ import ProjectItem from '@/components/02.Organisms/Project/project-item';
 
 import styles from './projects-list.module.scss'
 
+/**
+ * Renders a list of projects fetched from the server.
+ * @returns {JSX.Element} The ProjectsList component
+ */
 const ProjectsList = async () => {
   const projectsList = await getProjectsList();
 

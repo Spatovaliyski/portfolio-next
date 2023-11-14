@@ -5,6 +5,10 @@ import NavItem from '@/components/01.Atoms/NavItem/nav-item';
 
 import styles from './menu.module.scss';
 
+/**
+ * Renders a menu component with a desktop and mobile version.
+ * @returns {JSX.Element} The Menu component.
+ */
 const Menu = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
