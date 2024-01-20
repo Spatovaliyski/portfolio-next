@@ -1,19 +1,17 @@
 .backTo {
   display: inline-block;
   margin-bottom: 1em;
-  opacity: .5;
 
   svg {
     transition: .1s ease all;
     transform: scale(1);
-    opacity: .4;
   }
 
   &:hover {
     opacity: 1;
 
     p { 
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     svg {
@@ -27,4 +25,8 @@
   display: flex;
   gap: .5em;
   align-items: center;
+
+	background-color: var(--color-accent);
+	padding: .5em 1em;
+	border-radius: 1em;
 }

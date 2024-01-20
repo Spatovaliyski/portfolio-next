@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import './globals.css';
 import Header from '@/components/04.Templates/Header/header';
 import Footer from '@/components/04.Templates/Footer/footer';
@@ -7,6 +8,10 @@ import styles from './layout.module.scss';
 import Container from '@/components/01.Atoms/Container/container';
 
 const font = localFont({ src: './KantumruyPro.ttf' })
+
+const SyncPointer = dynamic(() => import('@/components/01.Atoms/_libs/syncpointer'), {
+	ssr: false,
+});
 
 export const metadata = {
   title: 'Martin Spatovaliyski',
@@ -23,6 +28,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body className={font.className}>
+				<SyncPointer />
 				<div className={styles.site}>
 					<Header />
 					<main className={styles.main}>

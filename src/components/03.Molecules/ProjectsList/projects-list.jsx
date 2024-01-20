@@ -14,10 +14,10 @@ const ProjectsList = async () => {
   const [posts] = await Promise.all([projectsList]);
 
   return (
-    <div className={styles.projectsList}>
+		<div className={styles.projectsList}>
       {posts && posts.map((post, index) => (
-        <Animate key={index} delay={index * 10}>
-          <ProjectItem
+				<ProjectItem
+						key={post.id}
             className={''}
             title={post.title}
             year={post.endYear}
@@ -26,7 +26,6 @@ const ProjectsList = async () => {
             stack={post.tags}
             image={post.thumbnailId}
           />
-        </Animate>
       ))}
     </div>
   )
