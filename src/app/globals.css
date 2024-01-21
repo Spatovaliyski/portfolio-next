@@ -1,5 +1,5 @@
 :root {
-	--backdrop: #fff;
+
   --radius: 12;
   --border: 1;
   --backup-border: var(--backdrop);
@@ -10,6 +10,7 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+	--color-backdrop: #fff;
   --color-primary: #2a9f67;
   --color-background: #f1f1f1;
   --color-loader: rgba(255, 255, 255, 0.9);
@@ -23,6 +24,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+		--color-backdrop: #1f1f23;
     --color-primary: #0a5433;
     --color-background: #121212;
     --color-loader: rgba(22, 22, 29, 0.9);
