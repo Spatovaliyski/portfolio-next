@@ -26,7 +26,7 @@
 		background-attachment: fixed;
 		border: var(--border-size) solid var(--backup-border);
 		position: relative;
-		touch-action: none;
+		touch-action: manipulation;
 	}
 	
 	[data-glow]::before,
@@ -98,6 +98,10 @@
       margin-right: .5em;
     }
   }
+
+	@include md {
+		grid-template-columns: 1fr;
+	}
 }
 
 .wrapper {
