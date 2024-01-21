@@ -1,12 +1,15 @@
 import Image from 'next/image';
-import Title from '@/components/01.Atoms/Title/title';
-import SocialButton from '@/components/01.Atoms/Socials/social-button';
-import Animate from '@/components/01.Atoms/MountTransition/fader';
-import TechStack from '@/components/02.Organisms/Stack/tech-stack';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Title from '@/components/01.Atoms/Title/title.component';
+import SocialButton from '@/components/01.Atoms/Socials/social-button.component';
+import Animate from '@/components/01.Atoms/MountTransition/fader.component';
+import TechStack from '@/components/02.Organisms/Stack/tech-stack.component';
+
 import getMedia from '@/app/lib/getMedia';
 
 import styles from '../../03.Molecules/ProjectsList/projects-list.module.scss';
+import { PiGithubLogoThin } from 'react-icons/pi';
+import { CiCalendar } from "react-icons/ci";
+
 
 /**
  * Renders a project item with title, description, year, stack, link, and image.
@@ -28,7 +31,7 @@ const ProjectItem = async ({ className, title, description, year, stack, link, i
 	const [thumbnail] = await Promise.all([media]);
 
 	return (
-		<div className={`${styles.projectItem} ${className}`}>
+		<div className={`${styles.projectItem} ${className}`} data-glow>
 			<div className={styles.wrapper}>
 				<Animate delay={10}>
 					<div className={styles.heading}>
@@ -37,9 +40,9 @@ const ProjectItem = async ({ className, title, description, year, stack, link, i
 							<SocialButton
 								width={20}
 								link={link || ""}
-								icon={faGithub}
+								icon={<PiGithubLogoThin />}
 							>
-								{year}
+								<span><CiCalendar />{year}</span>
 							</SocialButton>
 						</p>
 					</div>
@@ -61,6 +64,7 @@ const ProjectItem = async ({ className, title, description, year, stack, link, i
 					<Image fill={true} className={styles.background} src={thumbnail.url} alt="" />
 				</figure>
 			)}
+	
 		</div>
 	)
 };

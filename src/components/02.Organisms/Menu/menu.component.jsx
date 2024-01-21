@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import NavItem from '@/components/01.Atoms/NavItem/nav-item';
+import NavItem from '@/components/01.Atoms/NavItem/nav-item.component';
 
 import styles from './menu.module.scss';
 
@@ -28,7 +28,7 @@ const Menu = () => {
         <NavItem href='/experience' label='Experience' />
         <NavItem href='/projects' label='Projects' />
         <NavItem href='/blog' label='Blog' />
-        <NavItem href='https://wp.spatovaliyski.com/martins-resume/' label='Resume' external />
+        <NavItem href='https://wp.spatovaliyski.com/resume/' label='Resume' external />
       </ul>
 
       {/* Hamburger Menu Icon for Mobile */}
@@ -46,7 +46,7 @@ const Menu = () => {
             <NavItem href='/experience' label='Experience' trigger={closeMobileMenu} />
             <NavItem href='/projects' label='Projects' trigger={closeMobileMenu} />
             <NavItem href='/blog' label='Blog' trigger={closeMobileMenu} />
-            <NavItem href='https://wp.spatovaliyski.com/martins-resume/' label='Resume' external trigger={closeMobileMenu} />
+            <NavItem href='https://wp.spatovaliyski.com/resume/' label='Resume' external trigger={closeMobileMenu} />
           </ul>
         </div>
       )}

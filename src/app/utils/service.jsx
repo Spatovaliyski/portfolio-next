@@ -8,9 +8,7 @@ import { API_ROOT, API_MEDIA, API_POSTS, API_EXPERIENCE, API_PROJECTS } from "./
 const fetchData = async (endpoint) => {
 	try {
 		const res = await fetch(`${API_ROOT}/${endpoint}`, {
-			next: {
-				revalidate: 60
-			}
+			next: { revalidate: 60 },
 		});
 		const data = await res.json();
 		return data;

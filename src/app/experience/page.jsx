@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
-import Loader from '@/components/01.Atoms/Loader/loader';
-import Title from '@/components/01.Atoms/Title/title';
-import BackArrow from '@/components/01.Atoms/BackArrow/back-arrow';
-import ExperiencePosts from '@/components/05.Pages/ExperiencePosts/experience-posts';
+import Loader from '@/components/01.Atoms/Loader/loader.component';
+import Title from '@/components/01.Atoms/Title/title.component';
+import BackArrow from '@/components/01.Atoms/BackArrow/back-arrow.component';
+import ExperiencePosts from '@/components/05.Pages/ExperiencePosts/experience-posts.component';
 
 /**
  * Renders the Experience page component.
