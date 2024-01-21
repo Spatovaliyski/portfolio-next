@@ -1,6 +1,5 @@
 import getProjectsList from '@/app/lib/getProjects';
-import Animate from '@/components/01.Atoms/MountTransition/fader';
-import ProjectItem from '@/components/02.Organisms/Project/project-item';
+import ProjectItem from '@/components/02.Organisms/Project/project-item.component';
 
 import styles from './projects-list.module.scss'
 

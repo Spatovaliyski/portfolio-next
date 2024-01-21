@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import NavItem from '@/components/01.Atoms/NavItem/nav-item';
+import NavItem from '@/components/01.Atoms/NavItem/nav-item.component';
 
 import styles from './menu.module.scss';
 

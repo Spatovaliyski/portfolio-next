@@ -1,7 +1,7 @@
 import getExperiencePosts from '@/app/lib/getExperiencePosts';
-import Animate from '@/components/01.Atoms/MountTransition/fader';
-import ListItem from '@/components/01.Atoms/List/list-item';
-import ListWithProgress from '@/components/02.Organisms/List/list-with-progress';
+import Animate from '@/components/01.Atoms/MountTransition/fader.component';
+import ListItem from '@/components/01.Atoms/List/list-item.component';
+import ListWithProgress from '@/components/02.Organisms/List/list-with-progress.component';
 
 /**
  * Renders a list of experience posts.

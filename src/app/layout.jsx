@@ -1,11 +1,13 @@
 import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 import './globals.css';
-import Header from '@/components/04.Templates/Header/header';
-import Footer from '@/components/04.Templates/Footer/footer';
+import Header from '@/components/04.Templates/Header/header.component';
+import Footer from '@/components/04.Templates/Footer/footer.component';
 
 import localFont from 'next/font/local';
 import styles from './layout.module.scss';
-import Container from '@/components/01.Atoms/Container/container';
+import Container from '@/components/01.Atoms/Container/container.component';
+import Loader from '@/components/01.Atoms/Loader/loader.component';
 
 const font = localFont({ src: './KantumruyPro.ttf' })
 
@@ -33,7 +35,9 @@ export default function RootLayout({ children }) {
 					<Header />
 					<main className={styles.main}>
 						<Container>
-							{children}
+							<Suspense fallback={<Loader />}>
+								{children}
+							</Suspense>
 						</Container>
 					</main>
 					<Footer />

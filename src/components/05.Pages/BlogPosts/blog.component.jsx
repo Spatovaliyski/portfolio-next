@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import getBlogPosts from '@/app/lib/getBlogPosts';
-import Title from '@/components/01.Atoms/Title/title';
+import Title from '@/components/01.Atoms/Title/title.component';
 
 import styles from './blog.module.scss'
 
@@ -16,12 +16,12 @@ const Blog = async () => {
 	return (
 		<div className={styles.articles}>
 			{posts.map(post => (
-				<div className={styles.article} key={post.id}>
-					<Link href={`/blog/${post.id}`}>
+				<article className={styles.blogPost} key={post.id}>
+					<Link href={`/blog/${post.id}`} className={styles.blogPostLink}>
 						<Title type={'h3'}>{post.title}</Title>
 						<div className={styles.articleDate}>{post.date}</div>
 					</Link>
-				</div>
+				</article>
 			))}
 		</div>
 	);

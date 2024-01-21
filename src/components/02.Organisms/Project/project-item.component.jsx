@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Title from '@/components/01.Atoms/Title/title';
-import SocialButton from '@/components/01.Atoms/Socials/social-button';
-import Animate from '@/components/01.Atoms/MountTransition/fader';
-import TechStack from '@/components/02.Organisms/Stack/tech-stack';
+import Title from '@/components/01.Atoms/Title/title.component';
+import SocialButton from '@/components/01.Atoms/Socials/social-button.component';
+import Animate from '@/components/01.Atoms/MountTransition/fader.component';
+import TechStack from '@/components/02.Organisms/Stack/tech-stack.component';
 
 import getMedia from '@/app/lib/getMedia';
 

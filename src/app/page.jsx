@@ -1,16 +1,19 @@
 import React from 'react';
-import Animate from '@/components/01.Atoms/MountTransition/fader';
-import SocialButton from '@/components/01.Atoms/Socials/social-button';
-import HeadingWithText from '@/components/02.Organisms/Heading/heading-with-text';
+import Animate from '@/components/01.Atoms/MountTransition/fader.component';
+import SocialButton from '@/components/01.Atoms/Socials/social-button.component';
+import HeadingWithText from '@/components/02.Organisms/Heading/heading-with-text.component';
 
 import { PiLinkedinLogoThin, PiGithubLogoThin  } from "react-icons/pi";
 import { CiMail } from "react-icons/ci";
 
 import styles from './page.module.scss';
+import EmploymentStatus from '@/components/03.Molecules/EmploymentStatus/employment-status.component';
 
 export default function Home() {
   return (
-    <div>
+		<div>
+			<EmploymentStatus isLookingForWork={true} />
+
       <HeadingWithText
         title={`Heya,\n I'm Martin Spatovaliyski`}
         subtitle={'Front-end developer for over 6 Years,\n React & WordPress enthusiast, UI/UX Engineer'}

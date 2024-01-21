@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react'
-import BackArrow from '@/components/01.Atoms/BackArrow/back-arrow';
-import Title from '@/components/01.Atoms/Title/title';
-import ProjectsList from '@/components/03.Molecules/ProjectsList/projects-list';
-import Loader from '@/components/01.Atoms/Loader/loader';
+import BackArrow from '@/components/01.Atoms/BackArrow/back-arrow.component';
+import Title from '@/components/01.Atoms/Title/title.component';
+import ProjectsList from '@/components/03.Molecules/ProjectsList/projects-list.component';
+import Loader from '@/components/01.Atoms/Loader/loader.component';
 
 /**
  * Renders the Portfolio page with a BackArrow, a Title and a ProjectsList component.
