@@ -17,7 +17,7 @@ const SyncPointer = dynamic(() => import('@/components/01.Atoms/_libs/syncpointe
 
 export const metadata = {
   title: 'Martin Spatovaliyski',
-  description: 'React & WordPress Enthusiast',
+  description: 'Front end | UI/UX | WordPress, Next.js & React',
 }
 
 /**

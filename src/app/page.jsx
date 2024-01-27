@@ -8,17 +8,14 @@ import { CiMail } from "react-icons/ci";
 
 import styles from './page.module.scss';
 import EmploymentStatus from '@/components/03.Molecules/EmploymentStatus/employment-status.component';
+import Introduction from '@/components/03.Molecules/Introduction/introduction.component';
 
 export default function Home() {
   return (
 		<div>
 			<EmploymentStatus isLookingForWork={true} />
 
-      <HeadingWithText
-        title={`Heya,\n I'm Martin Spatovaliyski`}
-        subtitle={'Front-end developer for over 6 Years,\n React & WordPress enthusiast, UI/UX Engineer'}
-        description={`Started with "WYSIWYG Web builder" in 2007-2008, now I'm here! Born and living in Bulgaria, Owning a Master's in CS (Graphical Interfaces), and having developed multiple successful projects, my professional career stretches 6+ years, owning products and being an end-to-end partner during the entire process of each project`}
-      />
+			<Introduction />
 
 			<div className={styles.socials}>
 				<Animate delay={20}>

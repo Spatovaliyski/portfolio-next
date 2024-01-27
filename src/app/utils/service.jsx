@@ -28,7 +28,7 @@ const fetchData = async (endpoint) => {
  * @property {Function} getThumbnail - Method to fetch a thumbnail by ID.
  */
 const apiService = {
-	getPosts: async () => fetchData(API_POSTS),
+	getPosts: async () => fetchData(API_POSTS ),
 
 	getPost: async (id) => fetchData(`${API_POSTS}/${id}`),
 
@@ -37,6 +37,8 @@ const apiService = {
 	getProjects: async () => fetchData(API_PROJECTS),
 
 	getThumbnail: async (id) => fetchData(`${API_MEDIA}/${id}`),
+
+	getGeneralData: async () => fetchData('/'), // Fetch the root instead of /wp/v2
 };
 
 export default apiService;
