@@ -4,6 +4,10 @@ import BackArrow from '@/components/01.Atoms/BackArrow/back-arrow.component';
 import Title from '@/components/01.Atoms/Title/title.component';
 import Blog from '@/components/05.Pages/BlogPosts/blog.component';
 
+export const metadata = {
+  title: 'Blog | Martin Spatovaliyski',
+}
+
 /**
  * Renders the Blog page component.
  * @param {Object} props - The component props.

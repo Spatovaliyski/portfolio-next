@@ -4,6 +4,10 @@ import Title from '@/components/01.Atoms/Title/title.component';
 import BackArrow from '@/components/01.Atoms/BackArrow/back-arrow.component';
 import ExperiencePosts from '@/components/05.Pages/ExperiencePosts/experience-posts.component';
 
+export const metadata = {
+  title: 'Experience | Martin Spatovaliyski',
+}
+
 /**
  * Renders the Experience page component.
  * @returns {JSX.Element} Experience page component

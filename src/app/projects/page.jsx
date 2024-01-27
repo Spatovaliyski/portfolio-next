@@ -4,6 +4,10 @@ import Title from '@/components/01.Atoms/Title/title.component';
 import ProjectsList from '@/components/03.Molecules/ProjectsList/projects-list.component';
 import Loader from '@/components/01.Atoms/Loader/loader.component';
 
+export const metadata = {
+  title: 'Projects | Martin Spatovaliyski',
+}
+
 /**
  * Renders the Portfolio page with a BackArrow, a Title and a ProjectsList component.
  * @returns {JSX.Element} The Portfolio page UI.
