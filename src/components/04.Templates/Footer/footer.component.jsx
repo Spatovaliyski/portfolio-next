@@ -8,19 +8,19 @@ import Container from '@/components/01.Atoms/Container/container.component';
  * @returns {JSX.Element} Footer component.
  */
 const Footer = () => {
-	const currentYear = () => {
-		const year = new Date().getFullYear();
+  const currentYear = () => {
+    const year = new Date().getFullYear();
 
-		return year;
-	}
-	
-	return (
-		<div className={styles.footer}>
-			<Container>
-				&copy; 2022 - {currentYear()} / Made using NextJS & WordPress
-			</Container>
-		</div>
-	)
+    return year;
+  }
+  
+  return (
+    <div className={styles.footer}>
+      <Container>
+        &copy; 2022 - {currentYear()} / Made using NextJS & WordPress
+      </Container>
+    </div>
+  )
 };
 
 export default Footer;

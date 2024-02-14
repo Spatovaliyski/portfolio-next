@@ -12,8 +12,8 @@ import styles from './../BlogPosts/blog.module.scss'
  * @returns {JSX.Element} - The rendered blog post.
  */
 const BlogPost = async ({ post }) => {
-	return (
-		<article className={styles.article}>
+  return (
+    <article className={styles.article}>
       <Title type={'h1'}>{post.title}</Title>
       <div className={styles.articleDate}>{post.date}</div>
       <div dangerouslySetInnerHTML={{ __html: post.content }} />

@@ -10,13 +10,13 @@ import styles from './tech-stack.module.scss';
  * @returns {JSX.Element} - The rendered component.
  */
 const TechStack = ({ className, items }) => {
-	return (
-		<ul className={`${styles.techStack} ${className}`}>
-			{items?.map((item, index) => (
-				<li className={styles.techStackItem} key={index}>{item}</li>
-			))}
-		</ul>
-	)
+  return (
+    <ul className={`${styles.techStack} ${className}`}>
+      {items?.map((item, index) => (
+        <li className={styles.techStackItem} key={index}>{item}</li>
+      ))}
+    </ul>
+  )
 }
 
 export default TechStack;

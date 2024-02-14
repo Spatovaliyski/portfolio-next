@@ -13,15 +13,15 @@ import Loader from '@/components/01.Atoms/Loader/loader.component';
  */
 
 const Post = async ({ params: { id } }) => {
-	const [post] = await Promise.all([getBlogPost(id)]);
+  const [post] = await Promise.all([getBlogPost(id)]);
 
-	return (
-		<>
-			<BackArrow href={'/blog'} />
-			
-			<Suspense fallback={<Loader />}><BlogPost post={post} /></Suspense>
-		</>
-	)
+  return (
+    <>
+      <BackArrow href={'/blog'} />
+      
+      <Suspense fallback={<Loader />}><BlogPost post={post} /></Suspense>
+    </>
+  )
 };
 export default Post;
 
@@ -36,10 +36,10 @@ export default Post;
  * @returns {Object} - The metadata for the blog post page.
  */
 export async function generateMetadata({ params }) {
-	const [post] = await Promise.all([getBlogPost(params.id)]);
+  const [post] = await Promise.all([getBlogPost(params.id)]);
 
-	return {
-		title: post.title,
-		description: post.description,
-	}
+  return {
+    title: post.title,
+    description: post.description,
+  }
 }

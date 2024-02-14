@@ -13,14 +13,14 @@ export const metadata = {
  * @returns {JSX.Element} Experience page component
  */
 const Experience = () => {
-	return (
-		<>
-			<BackArrow href={'/'} />
-			<Title type={'h1'}>Experience</Title>
+  return (
+    <>
+      <BackArrow href={'/'} />
+      <Title type={'h1'}>Experience</Title>
 
-			<Suspense fallback={<Loader />}><ExperiencePosts /></Suspense>
-		</>
-	)
+      <Suspense fallback={<Loader />}><ExperiencePosts /></Suspense>
+    </>
+  )
 }
 
 export default Experience;

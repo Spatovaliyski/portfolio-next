@@ -9,12 +9,12 @@ import styles from './list-with-progress.module.scss';
  * @returns {JSX.Element} - The ListWithProgress component.
  */
 const ListWithProgress = ({children}) => {
-	return (
-		<div className={styles.container}>
-			<div className={styles.progressBar}></div>
-			<ul className={styles.list}>{children}</ul>
-		</div>
-	)
+  return (
+    <div className={styles.container}>
+      <div className={styles.progressBar}></div>
+      <ul className={styles.list}>{children}</ul>
+    </div>
+  )
 }
 
 export default ListWithProgress;

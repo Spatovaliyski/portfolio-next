@@ -9,9 +9,9 @@ import styles from './title.module.scss';
  * @returns {JSX.Element} - The rendered title element.
  */
 const Title = ({ type, children }) => {
-	const Element = type;
+  const Element = type;
 
-	return React.createElement(Element, { className: styles.title }, children);
+  return React.createElement(Element, { className: styles.title }, children);
 }
 
 export default Title;

@@ -12,40 +12,40 @@ import Introduction from '@/components/03.Molecules/Introduction/introduction.co
 
 export default function Home() {
   return (
-		<div>
-			<EmploymentStatus isLookingForWork={true} />
+    <div>
+      <EmploymentStatus isLookingForWork={true} />
 
-			<Introduction />
+      <Introduction />
 
-			<div className={styles.socials}>
-				<Animate delay={20}>
-					<SocialButton
-						link={'https://linkedin.com/in/martin-spatovaliyski/'}
-						external={true}
-						width={24}
-						icon={<PiLinkedinLogoThin />}
-					/>
-				</Animate>
+      <div className={styles.socials}>
+        <Animate delay={20}>
+          <SocialButton
+            link={'https://linkedin.com/in/martin-spatovaliyski/'}
+            external={true}
+            width={24}
+            icon={<PiLinkedinLogoThin />}
+          />
+        </Animate>
 
-				<Animate delay={30}>
-					<SocialButton
-						link={'https://github.com/Spatovaliyski'}
-						external={true}
-						width={24}
-						buttonColor={'var(--color-github-icon)'}
-						icon={<PiGithubLogoThin />}
-					/>
-				</Animate>
+        <Animate delay={30}>
+          <SocialButton
+            link={'https://github.com/Spatovaliyski'}
+            external={true}
+            width={24}
+            buttonColor={'var(--color-github-icon)'}
+            icon={<PiGithubLogoThin />}
+          />
+        </Animate>
 
-				<Animate delay={40}>
-					<SocialButton
-						link={'mailto:martinspatovaliyski@gmail.com'}
-						external={true}
-						buttonColor={'var(--color-mailto-icon)'}
-						icon={<CiMail />}
-					/>
-				</Animate>
-				
+        <Animate delay={40}>
+          <SocialButton
+            link={'mailto:martinspatovaliyski@gmail.com'}
+            external={true}
+            buttonColor={'var(--color-mailto-icon)'}
+            icon={<CiMail />}
+          />
+        </Animate>
+        
       </div>
     </div>
   )

@@ -27,14 +27,14 @@ import Link from 'next/link';
  * @returns {JSX.Element} - The project item component
  */
 const ProjectItem = async ({ className, title, description, year, stack, link, image }) => {
-	const media = await getMedia(image);
+  const media = await getMedia(image);
 
-	const [thumbnail] = await Promise.all([media]);
+  const [thumbnail] = await Promise.all([media]);
 
-	return (
-		<div className={`${styles.projectItem} ${className}`} data-glow>
-			<div className={styles.wrapper}>
-				<Animate delay={10}>
+  return (
+    <div className={`${styles.projectItem} ${className}`} data-glow>
+      <div className={styles.wrapper}>
+        <Animate delay={10}>
           <div className={styles.heading}>
             {!!link ? (
               <Link href={link} target={'blank'}>
@@ -43,37 +43,37 @@ const ProjectItem = async ({ className, title, description, year, stack, link, i
             ) : (
               <Title type={'h4'}>{title}</Title>
             )}
-						<p className={styles.dateOfCreation}>
-							<SocialButton
-								width={20}
-								link={link || ""}
-								icon={<PiGithubLogoThin />}
-							>
-								<span><CiCalendar />{year}</span>
-							</SocialButton>
-						</p>
-					</div>
-				</Animate>
+            <p className={styles.dateOfCreation}>
+              <SocialButton
+                width={20}
+                link={link || ""}
+                icon={<PiGithubLogoThin />}
+              >
+                <span><CiCalendar />{year}</span>
+              </SocialButton>
+            </p>
+          </div>
+        </Animate>
 
-				<div className={styles.content}>
-					<Animate delay={30}>
-						<p className={styles.description}>{description}</p>
-					</Animate>
-					
-					<Animate delay={40}>
-						<TechStack className={''} items={stack} />
-					</Animate>
-				</div>
-			</div>
+        <div className={styles.content}>
+          <Animate delay={30}>
+            <p className={styles.description}>{description}</p>
+          </Animate>
+          
+          <Animate delay={40}>
+            <TechStack className={''} items={stack} />
+          </Animate>
+        </div>
+      </div>
 
-			{thumbnail && (
-				<figure className={styles.projectBackground}>
-					<Image fill={true} className={styles.background} src={thumbnail.url} alt="" />
-				</figure>
-			)}
-	
-		</div>
-	)
+      {thumbnail && (
+        <figure className={styles.projectBackground}>
+          <Image fill={true} className={styles.background} src={thumbnail.url} alt="" />
+        </figure>
+      )}
+  
+    </div>
+  )
 };
 
 export default ProjectItem;

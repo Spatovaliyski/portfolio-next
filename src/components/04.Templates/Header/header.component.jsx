@@ -8,15 +8,15 @@ import Container from '@/components/01.Atoms/Container/container.component';
  * @returns {JSX.Element} The header component.
  */
 const Header = () => {
-	return (
-		<header className={styles.header}>
-			<Container>
-				<div className={styles.headerWrapper}>
-					<Menu />
-				</div>
-			</Container>
-		</header>
-	)
+  return (
+    <header className={styles.header}>
+      <Container>
+        <div className={styles.headerWrapper}>
+          <Menu />
+        </div>
+      </Container>
+    </header>
+  )
 };
 
 export default Header;

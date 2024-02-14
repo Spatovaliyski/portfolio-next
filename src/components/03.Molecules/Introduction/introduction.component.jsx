@@ -8,17 +8,17 @@ import React from 'react'
  * @returns {JSX.Element} The introduction component.
  */
 const Introduction = async () => {
-	const generalData = await getGeneralData();
+  const generalData = await getGeneralData();
 
-	const [data] = await Promise.all([generalData]);
+  const [data] = await Promise.all([generalData]);
 
-	return (
-		<HeadingWithText
-			title={`Heya,\n I'm Martin Spatovaliyski`}
-			subtitle={'Front-end developer for over 6 Years,\n WordPress, React & Next.js enthusiast, UI/UX Engineer'}
-			description={data.description}
-		/>
-	)
+  return (
+    <HeadingWithText
+      title={`Heya,\n I'm Martin Spatovaliyski`}
+      subtitle={'Front-end developer for over 6 Years,\n WordPress, React & Next.js enthusiast, UI/UX Engineer'}
+      description={data.description}
+    />
+  )
 }
 
 export default Introduction

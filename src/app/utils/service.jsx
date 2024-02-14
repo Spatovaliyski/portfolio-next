@@ -6,16 +6,16 @@ import { API_ROOT, API_MEDIA, API_POSTS, API_EXPERIENCE, API_PROJECTS } from "./
  * @returns {Promise} - A Promise that resolves to the fetched data or null if an error occurs.
  */
 const fetchData = async (endpoint) => {
-	try {
-		const res = await fetch(`${API_ROOT}/${endpoint}`, {
-			next: { revalidate: 60 },
-		});
-		const data = await res.json();
-		return data;
-	} catch (error) {
-		console.error(`Error fetching data for ${endpoint}:`, error);
-		return null;
-	}
+  try {
+    const res = await fetch(`${API_ROOT}/${endpoint}`, {
+      next: { revalidate: 60 },
+    });
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error(`Error fetching data for ${endpoint}:`, error);
+    return null;
+  }
 };
 
 /**
@@ -28,17 +28,17 @@ const fetchData = async (endpoint) => {
  * @property {Function} getThumbnail - Method to fetch a thumbnail by ID.
  */
 const apiService = {
-	getPosts: async () => fetchData(API_POSTS ),
+  getPosts: async () => fetchData(API_POSTS ),
 
-	getPost: async (id) => fetchData(`${API_POSTS}/${id}`),
+  getPost: async (id) => fetchData(`${API_POSTS}/${id}`),
 
-	getWorkExperience: async () => fetchData(API_EXPERIENCE),
+  getWorkExperience: async () => fetchData(API_EXPERIENCE),
 
-	getProjects: async () => fetchData(API_PROJECTS),
+  getProjects: async () => fetchData(API_PROJECTS),
 
-	getThumbnail: async (id) => fetchData(`${API_MEDIA}/${id}`),
+  getThumbnail: async (id) => fetchData(`${API_MEDIA}/${id}`),
 
-	getGeneralData: async () => fetchData('/'), // Fetch the root instead of /wp/v2
+  getGeneralData: async () => fetchData('/'), // Fetch the root instead of /wp/v2
 };
 
 export default apiService;

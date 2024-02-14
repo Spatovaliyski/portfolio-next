@@ -6,16 +6,16 @@ import apiService from "../utils/service";
  * @returns {Promise<Array>} An array of objects representing work experience posts.
  */
 export default async function getGeneralData() {
-	const data = await apiService.getGeneralData();
+  const data = await apiService.getGeneralData();
 
-	/**
-	 * Pre-define what data we'll use, no mapping needed.
-	 */
-	const formattedData = {
-		icon: data.site_icon_url,
-		name: data.name,
-		description: data.description,
-	}
+  /**
+   * Pre-define what data we'll use, no mapping needed.
+   */
+  const formattedData = {
+    icon: data.site_icon_url,
+    name: data.name,
+    description: data.description,
+  }
 
-	return formattedData;
+  return formattedData;
 }

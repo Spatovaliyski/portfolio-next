@@ -13,16 +13,16 @@ import styles from './icon-with-text.module.scss';
  * @returns {JSX.Element} - The rendered component.
  */
 const IconWithText = ({ name, width, icon, color }) => {
-	const iconElement = (
-		<div className={styles.iconWithText}>
-			<div className={styles.container} data-icon={name} style={{ backgroundColor: color }}>
-				<FontAwesomeIcon width={width || 26} height={width || 26} icon={icon} />
-			</div>
-			<div>{name}</div>
-		</div>
-	);
+  const iconElement = (
+    <div className={styles.iconWithText}>
+      <div className={styles.container} data-icon={name} style={{ backgroundColor: color }}>
+        <FontAwesomeIcon width={width || 26} height={width || 26} icon={icon} />
+      </div>
+      <div>{name}</div>
+    </div>
+  );
 
-	return iconElement;
+  return iconElement;
 };
 
 export default IconWithText;

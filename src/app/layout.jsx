@@ -13,7 +13,7 @@ import styles from './layout.module.scss';
 const font = localFont({ src: './KantumruyPro.ttf' })
 
 const SyncPointer = dynamic(() => import('@/components/01.Atoms/_libs/syncpointer'), {
-	ssr: false,
+  ssr: false,
 });
 
 export const metadata = {
@@ -28,24 +28,24 @@ export const metadata = {
  * @returns {JSX.Element} - The JSX code for the root layout.
  */
 export default function RootLayout({ children }) {
-	return (
-		<html lang="en">
-			<body className={font.className}>
-				<SyncPointer />
-				<div className={styles.site}>
-					<Header />
-					<main className={styles.main}>
-						<Container>
-							<Suspense fallback={<Loader />}>
-								{children}
-							</Suspense>
-						</Container>
-					</main>
-					<Footer />
-				</div>
+  return (
+    <html lang="en">
+      <body className={font.className}>
+        <SyncPointer />
+        <div className={styles.site}>
+          <Header />
+          <main className={styles.main}>
+            <Container>
+              <Suspense fallback={<Loader />}>
+                {children}
+              </Suspense>
+            </Container>
+          </main>
+          <Footer />
+        </div>
       </body>
       
       <GoogleTagManager gtmId={'GTM-TMPRX8N5'} />
-		</html>
-	)
+    </html>
+  )
 };

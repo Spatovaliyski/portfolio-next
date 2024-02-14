@@ -15,14 +15,14 @@ export const metadata = {
  * @returns {JSX.Element} - The rendered component.
  */
 const BlogPage = () => {
-	return (
-		<>
-			<BackArrow href={'/'} />
-			<Title type={'h1'}>Blog</Title>
-			
-			<Suspense fallback={<Loader />}><Blog /></Suspense>
-		</>
-	);
+  return (
+    <>
+      <BackArrow href={'/'} />
+      <Title type={'h1'}>Blog</Title>
+      
+      <Suspense fallback={<Loader />}><Blog /></Suspense>
+    </>
+  );
 };
 
 export default BlogPage;

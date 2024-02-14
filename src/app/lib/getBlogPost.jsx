@@ -10,14 +10,14 @@ import he from 'he';
  * @throws {Error} - If the API request fails or the response is not in the expected format.
  */
 export default async function getBlogPost(id) {
-	const data = await apiService.getPost(id);
+  const data = await apiService.getPost(id);
 
-	const formattedPost = {
-		id: data.id,
-		title: he.decode(data.title.rendered),
-		content: data.content.rendered,
-		date: new Date(data.date).toLocaleDateString('en-GB'),
-	};
+  const formattedPost = {
+    id: data.id,
+    title: he.decode(data.title.rendered),
+    content: data.content.rendered,
+    date: new Date(data.date).toLocaleDateString('en-GB'),
+  };
 
-	return formattedPost;
+  return formattedPost;
 }

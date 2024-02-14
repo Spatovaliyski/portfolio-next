@@ -13,14 +13,14 @@ import Link from 'next/link';
  * @returns {JSX.Element} - The social button element.
  */
 const SocialButton = ({ link, buttonColor, external, icon, children, className }) => {
-	const iconElement = (
-		<Link className={className} href={link} style={!!buttonColor ? { color: buttonColor} : {}} target={!!external ? '_blank' : ''}> 
-			{icon && ( icon )}
-			{children}
-		</Link>
-	);
+  const iconElement = (
+    <Link className={className} href={link} style={!!buttonColor ? { color: buttonColor} : {}} target={!!external ? '_blank' : ''}> 
+      {icon && ( icon )}
+      {children}
+    </Link>
+  );
 
-	return iconElement;
+  return iconElement;
 };
 
 export default SocialButton;

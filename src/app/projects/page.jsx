@@ -13,14 +13,14 @@ export const metadata = {
  * @returns {JSX.Element} The Portfolio page UI.
  */
 const Portfolio = () => {
-	return (
-		<>
-			<BackArrow href={'/'} />
-			<Title type={'h1'}>Projects</Title>
+  return (
+    <>
+      <BackArrow href={'/'} />
+      <Title type={'h1'}>Projects</Title>
 
-			<Suspense fallback={<Loader />}><ProjectsList /></Suspense>
-		</>
-	)
+      <Suspense fallback={<Loader />}><ProjectsList /></Suspense>
+    </>
+  )
 }
 
 export default Portfolio;
