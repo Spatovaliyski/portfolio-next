@@ -9,6 +9,7 @@ import getMedia from '@/app/lib/getMedia';
 import styles from '../../03.Molecules/ProjectsList/projects-list.module.scss';
 import { PiGithubLogoThin } from 'react-icons/pi';
 import { CiCalendar } from "react-icons/ci";
+import Link from 'next/link';
 
 
 /**
@@ -34,8 +35,14 @@ const ProjectItem = async ({ className, title, description, year, stack, link, i
 		<div className={`${styles.projectItem} ${className}`} data-glow>
 			<div className={styles.wrapper}>
 				<Animate delay={10}>
-					<div className={styles.heading}>
-						<Title type={'h4'}>{title}</Title>
+          <div className={styles.heading}>
+            {!!link ? (
+              <Link href={link} target={'blank'}>
+                <Title type={'h4'}>{title}</Title>
+              </Link>
+            ) : (
+              <Title type={'h4'}>{title}</Title>
+            )}
 						<p className={styles.dateOfCreation}>
 							<SocialButton
 								width={20}
