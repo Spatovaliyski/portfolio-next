@@ -1,7 +1,5 @@
-import React from 'react';
 import Animate from '@/components/01.Atoms/MountTransition/fader.component';
 import SocialButton from '@/components/01.Atoms/Socials/social-button.component';
-import HeadingWithText from '@/components/02.Organisms/Heading/heading-with-text.component';
 
 import { PiLinkedinLogoThin, PiGithubLogoThin  } from "react-icons/pi";
 import { CiMail } from "react-icons/ci";
@@ -49,4 +47,4 @@ export default function Home() {
       </div>
     </div>
   )
-};
+}

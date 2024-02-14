@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 /**
@@ -14,7 +13,7 @@ import Link from 'next/link';
  */
 const SocialButton = ({ link, buttonColor, external, icon, children, className }) => {
   const iconElement = (
-    <Link className={className} href={link} style={!!buttonColor ? { color: buttonColor} : {}} target={!!external ? '_blank' : ''}> 
+    <Link className={className} href={link} style={buttonColor ? { color: buttonColor} : {}} target={external ? '_blank' : ''}> 
       {icon && ( icon )}
       {children}
     </Link>

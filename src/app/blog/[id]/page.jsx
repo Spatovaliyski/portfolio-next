@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import { Suspense } from 'react'
 import getBlogPost from '@/app/lib/getBlogPost';
 import BackArrow from '@/components/01.Atoms/BackArrow/back-arrow.component';
 import BlogPost from '@/components/05.Pages/BlogPost/post.component';

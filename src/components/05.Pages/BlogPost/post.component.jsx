@@ -1,4 +1,3 @@
-import getBlogPost from '@/app/lib/getBlogPost';
 import Title from '@/components/01.Atoms/Title/title.component';
 
 import styles from './../BlogPosts/blog.module.scss'

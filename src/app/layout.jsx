@@ -48,4 +48,4 @@ export default function RootLayout({ children }) {
       <GoogleTagManager gtmId={'GTM-TMPRX8N5'} />
     </html>
   )
-};
+}

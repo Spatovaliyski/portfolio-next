@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import Loader from '@/components/01.Atoms/Loader/loader.component';
 import BackArrow from '@/components/01.Atoms/BackArrow/back-arrow.component';
 import Title from '@/components/01.Atoms/Title/title.component';

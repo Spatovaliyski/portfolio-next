@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './header.module.scss';
 import Menu from '@/components/02.Organisms/Menu/menu.component';
 import Container from '@/components/01.Atoms/Container/container.component';

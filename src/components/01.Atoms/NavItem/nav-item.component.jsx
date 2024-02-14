@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from '../../02.Organisms/Menu/menu.module.scss'

@@ -1,4 +1,3 @@
-import React from 'react'
 import Animate from '@/components/01.Atoms/MountTransition/fader.component';
 
 import styles from './heading-with-text.module.scss';

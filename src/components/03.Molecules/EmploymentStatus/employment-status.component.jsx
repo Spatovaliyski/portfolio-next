@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styles from './employment-status.module.scss';
 
 import { GoDotFill } from "react-icons/go";

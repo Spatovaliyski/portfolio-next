@@ -36,7 +36,7 @@ const ProjectItem = async ({ className, title, description, year, stack, link, i
       <div className={styles.wrapper}>
         <Animate delay={10}>
           <div className={styles.heading}>
-            {!!link ? (
+            {link ? (
               <Link href={link} target={'blank'}>
                 <Title type={'h4'}>{title}</Title>
               </Link>

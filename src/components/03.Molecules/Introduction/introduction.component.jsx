@@ -1,6 +1,5 @@
 import getGeneralData from '@/app/lib/getGeneralData';
 import HeadingWithText from '@/components/02.Organisms/Heading/heading-with-text.component';
-import React from 'react'
 
 /**
  * Renders the Information page's introduction, the first thing the user sees.

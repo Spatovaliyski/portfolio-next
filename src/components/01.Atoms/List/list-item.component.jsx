@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styles from './list-item.module.scss';
 
 /**

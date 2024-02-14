@@ -1,4 +1,3 @@
-import React from 'react'
 import { HiOutlineArrowUturnLeft } from "react-icons/hi2";
 import Link from 'next/link';
 

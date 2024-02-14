@@ -14,7 +14,7 @@ const ProjectsList = async () => {
 
   return (
     <div className={styles.projectsList}>
-      {posts && posts.map((post, index) => (
+      {posts && posts.map((post) => (
         <ProjectItem
             key={post.id}
             className={''}

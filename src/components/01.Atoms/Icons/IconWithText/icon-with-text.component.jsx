@@ -1,4 +1,3 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from './icon-with-text.module.scss';
@@ -11,6 +10,8 @@ import styles from './icon-with-text.module.scss';
  * @param {Object} props.icon - The icon object.
  * @param {string} props.color - The background color of the icon container.
  * @returns {JSX.Element} - The rendered component.
+ * 
+ * @deprecated
  */
 const IconWithText = ({ name, width, icon, color }) => {
   const iconElement = (
