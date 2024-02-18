@@ -10,6 +10,8 @@ import styles from '../../03.Molecules/ProjectsList/projects-list.module.scss';
 import { PiGithubLogoThin } from 'react-icons/pi';
 import { CiCalendar } from "react-icons/ci";
 import Link from 'next/link';
+import { Suspense } from 'react';
+import Loader from '@/components/01.Atoms/Loader/loader.component';
 
 
 /**
@@ -68,7 +70,9 @@ const ProjectItem = async ({ className, title, description, year, stack, link, i
 
       {thumbnail && (
         <figure className={styles.projectBackground}>
-          <Image fill={true} className={styles.background} src={thumbnail.url} alt="" />
+          <Suspense fallback={<Loader />}>
+            <Image fill={true} className={styles.background} src={thumbnail.url} alt="" />
+          </Suspense>
         </figure>
       )}
   
