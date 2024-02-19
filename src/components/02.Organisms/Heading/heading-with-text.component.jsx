@@ -15,19 +15,19 @@ const HeadingWithText = ({ title, subtitle, description, className }) => {
   return (
     <div className={`${styles.heading} ${className}`}>
       {title && (
-        <Animate delay={0}>
+        <Animate delay={20}>
           <h1 className={styles.headingTitle}>{title}</h1>
         </Animate>
       )}
 
       {subtitle && (
-        <Animate delay={20}>
+        <Animate delay={30}>
           <h2 className={styles.headingSubTitle}>{subtitle}</h2>
         </Animate>
       )}
 
       {description && (
-        <Animate delay={30}>
+        <Animate delay={40}>
           <p className={styles.headingDescription}>{description}</p>
         </Animate>
       )}

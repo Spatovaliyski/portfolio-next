@@ -1,16 +1,24 @@
+import Animate from '@/components/01.Atoms/MountTransition/fader.component';
 import styles from './employment-status.module.scss';
 
-import { GoDotFill } from "react-icons/go";
-
+import { MdAddTask, MdBlock } from "react-icons/md";
 
 const EmploymentStatus = ({ isLookingForWork }) => {
   const statusColor = isLookingForWork ? 'green' : 'red';
-  const statusText = isLookingForWork ? 'Looking for work' : 'Not looking for work';
+  const statusText = isLookingForWork ? 'Open to work' : 'Not looking at the moment';
 
-  return (
-    <div className={styles.employmentStatus}>
-      <GoDotFill color={statusColor} /> {statusText}
-    </div>
+	return (
+		<Animate delay={0}>
+			<div className={styles.employmentStatus}>
+				<span className={styles.wrapper}>
+					{isLookingForWork ?
+						<MdAddTask color={statusColor} /> :
+						<MdBlock color={statusColor} />
+					}
+					{statusText}
+				</span>
+			</div>
+		</Animate>
   );
 };
 

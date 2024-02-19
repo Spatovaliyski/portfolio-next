@@ -142,6 +142,10 @@
 .heading {
   display: block;
   margin-bottom: 1.5em;
+
+  .title {
+    margin-bottom: .5rem;
+  }
 }
 
 .content {

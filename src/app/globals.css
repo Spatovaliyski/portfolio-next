@@ -20,6 +20,10 @@
   --color-menu: #010101;
   --color-mailto-icon: #f18e00;
   --color-github-icon: #333;
+
+	--bard-color-brand-text-gradient-stop-1: #369470;
+	--bard-color-brand-text-gradient-stop-2: #146949;
+	--bard-color-surface: #000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -108,4 +112,24 @@ code {
 
 .svg-inline--fa {
   height: auto;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2.25em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
 }

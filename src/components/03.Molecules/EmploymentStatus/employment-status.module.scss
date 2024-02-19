@@ -1,6 +1,13 @@
 .employmentStatus {
+  display: inline-block;
+}
+
+.wrapper {
   display: flex;
   align-items: center;
-  gap: .25em;
+  gap: .5em;
   margin-bottom: 1em;
+  background-color: white;
+  padding: .75em;
+  border-radius: 2em;
 }

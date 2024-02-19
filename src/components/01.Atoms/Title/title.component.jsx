@@ -8,10 +8,10 @@ import styles from './title.module.scss';
  * @param {React.ReactNode} props.children - The children to render inside the title element.
  * @returns {JSX.Element} - The rendered title element.
  */
-const Title = ({ type, children }) => {
+const Title = ({ type, className, children }) => {
   const Element = type;
 
-  return React.createElement(Element, { className: styles.title }, children);
+	return React.createElement(Element, { className: className || styles.title }, children);
 }
 
 export default Title;

@@ -40,7 +40,7 @@ const ProjectItem = async ({ className, title, description, year, stack, link, i
           <div className={styles.heading}>
             {link ? (
               <Link href={link} target={'blank'}>
-                <Title type={'h4'}>{title}</Title>
+                <Title className={styles.title} type={'h4'}>{title}</Title>
               </Link>
             ) : (
               <Title type={'h4'}>{title}</Title>

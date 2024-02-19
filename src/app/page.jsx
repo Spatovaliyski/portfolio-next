@@ -10,7 +10,7 @@ import Introduction from '@/components/03.Molecules/Introduction/introduction.co
 
 export default function Home() {
   return (
-    <div>
+		<div>
       <EmploymentStatus isLookingForWork={true} />
 
       <Introduction />
