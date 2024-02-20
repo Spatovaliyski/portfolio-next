@@ -7,10 +7,13 @@ import Footer from '@/components/04.Templates/Footer/footer.component';
 import Container from '@/components/01.Atoms/Container/container.component';
 import Loader from '@/components/01.Atoms/Loader/loader.component';
 
-import localFont from 'next/font/local';
+import { Nunito_Sans } from 'next/font/google';
 import styles from './layout.module.scss';
 
-const font = localFont({ src: './KantumruyPro.ttf' })
+const font = Nunito_Sans({
+	subsets: ['latin'],
+	display: 'swap',
+});
 
 const SyncPointer = dynamic(() => import('@/components/01.Atoms/_libs/syncpointer'), {
   ssr: false,

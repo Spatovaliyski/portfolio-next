@@ -5,15 +5,19 @@
   margin-bottom: 2em;
   list-style: none;
   position: relative;
+
+  padding: 1em;
+  border-radius: 1em;
+  background-color: var(--color-backdrop);
 }
 
 .dot {
-  background-color: var(--color-primary);
+  background-color: var(--color-menu);
   width: 12px;
   height: 12px;
   position: absolute;
   left: -29px;
-  top: .35em;
+  top: 1.35em;
   border-radius: 50%;
   z-index: 1;
 
@@ -23,7 +27,7 @@
 }
 
 .position {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.15em;
   margin-bottom: .25rem;
 }
@@ -36,6 +40,7 @@
 }
 
 .timeline {
+  font-style: italic;
   display: inline-block;
   font-weight: 300;
 
@@ -49,6 +54,7 @@
 }
 
 .type {
+  font-style: italic;
   font-weight: 300;
   margin-bottom: .75rem;
 }
