@@ -41,7 +41,6 @@ export default function RootLayout({ children }) {
           <Header />
           <main className={styles.main}>
             <Container>
-              <Loader />
               <Suspense fallback={<Loader />}>
                 <Providers>{children}</Providers>
               </Suspense>
