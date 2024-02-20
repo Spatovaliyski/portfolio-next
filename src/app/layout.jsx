@@ -1,18 +1,20 @@
 import dynamic from 'next/dynamic';
 import { GoogleTagManager } from '@next/third-parties/google'
 import { Suspense } from 'react';
-import './globals.css';
 import Header from '@/components/04.Templates/Header/header.component';
 import Footer from '@/components/04.Templates/Footer/footer.component';
 import Container from '@/components/01.Atoms/Container/container.component';
 import Loader from '@/components/01.Atoms/Loader/loader.component';
 
 import { Nunito_Sans } from 'next/font/google';
+
+import './globals.css';
 import styles from './layout.module.scss';
+import Providers from '@/components/01.Atoms/Providers/providers.component';
 
 const font = Nunito_Sans({
-	subsets: ['latin'],
-	display: 'swap',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 const SyncPointer = dynamic(() => import('@/components/01.Atoms/_libs/syncpointer'), {
@@ -39,8 +41,9 @@ export default function RootLayout({ children }) {
           <Header />
           <main className={styles.main}>
             <Container>
+              <Loader />
               <Suspense fallback={<Loader />}>
-                {children}
+                <Providers>{children}</Providers>
               </Suspense>
             </Container>
           </main>
