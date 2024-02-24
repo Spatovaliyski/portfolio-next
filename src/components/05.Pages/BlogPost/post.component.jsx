@@ -1,9 +1,8 @@
 import Title from '@/components/01.Atoms/Title/title.component';
-import { CiClock1, CiCalendar  } from "react-icons/ci";
-
-import styles from './../BlogPosts/blog.module.scss'
 import Animate from '@/components/01.Atoms/MountTransition/fader.component';
 
+import { CiClock1, CiCalendar } from "react-icons/ci";
+import styles from './../BlogPosts/blog.module.scss'
 
 /**
  * Renders a blog post with the given postId.

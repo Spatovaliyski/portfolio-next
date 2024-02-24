@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <Container>
-        &copy; 2022 - {currentYear()} / Made using NextJS & WordPress
+        &copy; 2022 - {currentYear()} Made using Next.js & WordPress
       </Container>
     </div>
   )
