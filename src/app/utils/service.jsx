@@ -1,4 +1,4 @@
-import { API_ROOT, API_MEDIA, API_POSTS, API_EXPERIENCE, API_PROJECTS } from "./config";
+import { API_ROOT, API_MEDIA, API_POSTS, API_EXPERIENCE, API_PROJECTS, API_AVAILABILITY } from "./config";
 
 /**
  * Fetches data from the API endpoint.
@@ -28,7 +28,7 @@ const fetchData = async (endpoint) => {
  * @property {Function} getThumbnail - Method to fetch a thumbnail by ID.
  */
 const apiService = {
-  getPosts: async () => fetchData(API_POSTS ),
+  getPosts: async () => fetchData(API_POSTS),
 
   getPost: async (id) => fetchData(`${API_POSTS}/${id}`),
 
@@ -38,6 +38,8 @@ const apiService = {
 
   getThumbnail: async (id) => fetchData(`${API_MEDIA}/${id}`),
 
+  getAvailability: async () => fetchData(API_AVAILABILITY),
+  
   getGeneralData: async () => fetchData('/'), // Fetch the root instead of /wp/v2
 };
 

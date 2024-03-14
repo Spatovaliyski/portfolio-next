@@ -9,3 +9,4 @@ export const API_MEDIA = `wp/v2/media`;
 export const API_EXPERIENCE = `wp/v2/work_experience`;
 export const API_PROJECTS = `wp/v2/work_projects`;
 export const API_GENERAL = `wp/v2/general`;
+export const API_AVAILABILITY = `theme-options/v1/opentowork`;
