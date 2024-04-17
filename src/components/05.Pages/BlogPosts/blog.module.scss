@@ -60,3 +60,22 @@
 		gap: 6px;
 	}
 }
+
+.article {
+  ul, ol {
+    margin-left: 18px;
+    margin-bottom: 1em;
+  
+    li {
+      margin-bottom: .35em;
+    }
+  }
+
+  figure {
+    margin-bottom: .5rem;
+  }
+
+  h2, h3, h4, h5 {
+    margin-top: 1em;
+  }
+}

@@ -1,7 +1,7 @@
 import Animate from '@/components/01.Atoms/MountTransition/fader.component';
 import styles from './employment-status.module.scss';
 
-import { MdAddTask, MdBlock } from "react-icons/md";
+import { MdAddTask } from "react-icons/md";
 import getAvailability from '@/app/lib/getAvailability';
 
 const EmploymentStatus = async () => {
