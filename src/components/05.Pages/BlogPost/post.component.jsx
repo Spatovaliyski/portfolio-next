@@ -13,6 +13,7 @@ import styles from './../BlogPosts/blog.module.scss'
  * @returns {JSX.Element} - The rendered blog post.
  */
 const BlogPost = async ({ post }) => {
+  
   /** 
    * Calculates the minute read for the given article content.
    * 
@@ -29,15 +30,13 @@ const BlogPost = async ({ post }) => {
     return minuteRead === 1 ? '1 minute' : `${minuteRead} minutes`;
   }
 
-  const minuteRead = calculateMinuteRead(post.content);
-
   return (
     <article className={styles.article}>
       <Title type={'h1'}>{post.title}</Title>
       <Animate delay={20}>
         <div className={styles.articleMeta}>
           <div className={styles.articleMetaColumn}><CiCalendar />{post.date}</div>
-          <div className={styles.articleMetaColumn}><CiClock1 />{minuteRead}</div>
+          <div className={styles.articleMetaColumn}><CiClock1 />{calculateMinuteRead(post.content)}</div>
         </div>
       </Animate>
       <Animate delay={30}>

@@ -1,4 +1,5 @@
 import apiService from "../utils/service";
+import useFormattedDate from "@/hooks/useFormattedDate";
 import he from 'he';
 
 /**
@@ -16,7 +17,7 @@ export default async function getBlogPost(id) {
     id: data.id,
     title: he.decode(data.title.rendered),
     content: data.content.rendered,
-    date: new Date(data.date).toLocaleDateString('en-GB'),
+    date: useFormattedDate(data.date)
   };
 
   return formattedPost;
